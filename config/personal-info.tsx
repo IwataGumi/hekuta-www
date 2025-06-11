@@ -1,16 +1,16 @@
 import React from "react";
-import { IconType } from "react-icons";
-import { 
-  FaGithub, 
-  FaInstagram,
+import { AiOutlinePython } from "react-icons/ai";
+import {
   FaBook,
   FaCode,
-  FaMusic,
-  FaMapMarkerAlt,
+  FaGithub,
+  FaInstagram,
+  FaJava,
+  FaMusic
 } from "react-icons/fa";
-import { SiQiita, SiZenn } from "react-icons/si";
 import { FaXTwitter } from "react-icons/fa6";
-import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss } from "react-icons/si";
+import { IoLogoPython } from "react-icons/io5";
+import { SiZenn } from "react-icons/si";
 
 // パーソナル情報の型定義
 export interface PersonalInfo {
@@ -61,28 +61,25 @@ export interface PersonalInfo {
 // あなたのパーソナル情報をここで編集してください
 export const personalInfo: PersonalInfo = {
   // 基本情報
-  name: "あなたの名前",
-  title: "大学1年生・駆け出しエンジニア",
+  name: "広瀬 エイトル",
+  title: "学生エンジニア",
   location: "Tokyo, Japan",
   avatarImage: "avatar.jpg", // 画像を追加したい場合はpublicフォルダに配置
-  initials: "YOUR", // アバター画像がない場合に表示されるイニシャル
-  
+  initials: "H H", // アバター画像がない場合に表示されるイニシャル
+
   // About Me セクション
   about: {
     paragraphs: [
-      <>大学1年生の駆け出しエンジニアです。Web開発の世界に魅了され、日々新しい技術を学んでいます。</>,
-      <>現在は<strong className="text-foreground">React</strong>と<strong className="text-foreground">Next.js</strong>を中心としたモダンなフロントエンド技術を学習中。TypeScriptやTailwind CSSの良さを実感しながら、実際にプロジェクトを作って経験を積んでいます。</>,
-      <>「良いコードは読みやすいコード」を心がけ、Clean CodeやDesign Patternsを学習。将来的にはユーザーに価値を提供できるWebアプリケーションを開発したいと考えています。</>,
-      <>毎日のコミットとQiitaでの学習記録を継続し、プログラミングコミュニティの一員として成長していきたいです。</>
-    ]
+      <>おはよう世界。おれは天才だ。</>,
+      <><span style={{color: 'red'}}>広瀬エイトル</span>です。</>,
+      ]
   },
   
   // 技術スタック
   techStack: [
-    { name: "Next.js", icon: <SiNextdotjs className="w-3 h-3 mr-1" /> },
-    { name: "React", icon: <SiReact className="w-3 h-3 mr-1" /> },
-    { name: "TypeScript", icon: <SiTypescript className="w-3 h-3 mr-1" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="w-3 h-3 mr-1" /> },
+    { name: "Python", icon: <AiOutlinePython className="w-3 h-3 mr-1" /> },
+    { name: "Pyhton 2.0", icon: <IoLogoPython className="w-3 h-3 mr-1" /> },
+    { name: "Java", icon: <FaJava className="w-3 h-3 mr-1" /> }
   ],
   
   // 趣味・興味
@@ -140,11 +137,6 @@ export const personalInfo: PersonalInfo = {
       platform: "Instagram",
       url: "https://instagram.com/yourusername", // あなたのInstagramのURLに変更してください
       icon: <FaInstagram className="size-6" />
-    },
-    {
-        platform: "Qiita",
-        url: "https://qiita.com/yourusername", // あなたのQiitaのURLに変更してください
-        icon: <SiQiita className="size-6" />
     },
     {
         platform: "Zenn",
